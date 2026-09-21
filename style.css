@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* BODY BACKGROUND (GLOBAL FIX) */
+body {
+    background: url('../images/johannesburg-4322256_1280.jpg') no-repeat center bottom / cover;
+    color: #fffcfc;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+/* FADE IN */
+body.fade-in {
+    opacity: 1;
+}
+
+/* FLEX WRAPPER (FOOTER FIX) */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
+                url('../images/GSGtransporter.png') no-repeat center/contain;
+    padding: 20px;
+    color: #b10000;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header p {
+    font-size: 1.1em;
+}
+
+/* NAV */
+nav {
+    background: #b10000;
+    text-align: center;
+    padding: 15px 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* MAIN CONTENT */
+main.content {
+    flex: 1; /* 🔥 THIS pushes footer down */
+    text-align: center;
+    padding: 50px 20px;
+    background: rgba(228, 228, 228, 0.4);
+    margin: 30px auto;
+    max-width: 850px;
+    border-radius: 16px;
+}
+
+/* IMAGE */
+.image-section img.main-image {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    background-color: #b10000;
+    color: white;
+    padding: 20px;
+    margin-top: auto; /* 🔥 Ensures footer sticks */
+}
+
+/* OPTIONAL ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    /* =========================
+   MOBILE OPTIMIZATION
+========================= */
+    @media (max-width: 768px) {
+    header {
+        padding: 8px 5px;
+    }
+
+    header h1 {
+        font-size: 1.4em;
+    }
+
+    header p {
+        display: none; /* hide tagline on mobile */
+    }
+}
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #b10000;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Hamburger button */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        color: white;
+        font-size: 1.5em;
+        padding: 10px;
+    }
+
+    main.content {
+        margin: 20px 10px;
+        padding: 30px 15px;
+    }
+
+    .image-section img.main-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Hide hamburger on desktop */
+.menu-toggle {
+    display: none;
+}
+}
+header {
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)),
+                url('../images/GSGtransporter.png') no-repeat center/cover;
+    padding: 15px 10px;
+    color: #b10000;
+}
